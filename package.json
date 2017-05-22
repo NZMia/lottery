@@ -1,0 +1,22 @@
+{
+  "name": "lottery",
+  "version": "1.0.0",
+  "description": "full stack developer_lottery_es6_express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NZMia/lottery.git"
+  },
+  "keywords": [
+    "es6"
+  ],
+  "author": "Mia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NZMia/lottery/issues"
+  },
+  "homepage": "https://github.com/NZMia/lottery#readme"
+}
