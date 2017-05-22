@@ -37,7 +37,7 @@ import args from './util/args';
                 basename:'cp',
                 extname:'.min.js'
             }))
-            .pipe(uglify({compress:{properties:false},output:{'quote_key':true}}))
+            .pipe(uglify({compress:{properties:false},output:{'quote_keys':true}}))
             .pipe(gulp.dest('server/public/js'))
             .pipe(gulpif(args.watch, livereload()))
     })
