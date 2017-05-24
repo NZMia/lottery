@@ -1,10 +1,3 @@
 //created by Mia
-
-class Test{
-    constructor(){
-        this.a = 'Hello world'
-    }
-}
-
-let test = new Test();
-document.body.innerHTML = test.a;
+//import 'babel-polyfill';
+import './components/demo14';

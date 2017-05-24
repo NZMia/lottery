@@ -49,22 +49,60 @@
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(2);
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 	'use strict';
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	//created by Mia
-
-	var Test = function Test() {
-	    _classCallCheck(this, Test);
-
-	    this.a = 'Hello world';
-	};
-
-	var test = new Test();
-	document.body.innerHTML = test.a;
+	{
+	    var ajax = function ajax(callback) {
+	        console.log('do it ');
+	        setTimeout(function () {
+	            callback && callback.call();
+	        }, 1000);
+	    };
+	    ajax(function () {
+	        console.log('timeout1');
+	    });
+	}
+	{
+	    var _ajax = function _ajax() {
+	        console.log('2');
+	        return new Promise(function (resolve, reject) {
+	            setTimeout(function () {
+	                resolve();
+	            }, 1000);
+	        });
+	    };
+	    _ajax().then(function () {
+	        console.log('promise', 'timeouts');
+	    });
+	}
+	{
+	    var _ajax2 = function _ajax2(num) {
+	        console.log('1');
+	        return new Promise(function (res, rej) {
+	            if (num > 5) {
+	                res();
+	            } else {
+	                throw new Error('wor');
+	            }
+	        });
+	    };
+	    _ajax2(3).then(function () {
+	        console.log('3');
+	    }).catch(function (err) {
+	        console.log('catch', err);
+	    });
+	}
+	{}
 
 /***/ })
 /******/ ]);
