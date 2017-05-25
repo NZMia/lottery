@@ -1,3 +1,3 @@
 //created by Mia
-//import 'babel-polyfill';
-import './components/demo15';
+// import 'babel-polyfill';
+import './components/demo18';
